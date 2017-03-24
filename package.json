@@ -1,0 +1,18 @@
+{
+  "name": "atom-monokai-dark-syntax",
+  "theme": "syntax",
+  "version": "0.0.0",
+  "description": "Monokai based syntax theme for Atom without interference in your selected UI theme.",
+  "keywords": [
+    "monokai",
+    "dark",
+    "syntax",
+    "theme"
+  ],
+  "repository": "https://github.com/davidbarredo/atom-monokai-dark-syntax",
+  "bugs": "https://github.com/davidbarredo/atom-monokai-dark-syntax/issues",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
