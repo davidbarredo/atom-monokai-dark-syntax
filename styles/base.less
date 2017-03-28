@@ -68,7 +68,7 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
 }
 
 .syntax--keyword {
-  color: @purple;
+  color: @red;
 
   &.syntax--control {
     color: @red;
@@ -91,7 +91,8 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   color: @cyan;
 }
 
-.syntax--constant {
+.syntax--constant,
+.syntax--variable.syntax--constant {
   color: @purple;
 
   &.syntax--character.syntax--escape {
@@ -182,7 +183,7 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
 
 .syntax--support {
   &.syntax--class {
-    color: @light-orange;
+    color: @green;
   }
 
   &.syntax--function  {
@@ -206,7 +207,7 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
     color: @green;
   }
   &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
-    color: @light-orange;
+    color: @green;
   }
 
   &.syntax--name.syntax--section {
@@ -221,14 +222,14 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
     color: @orange;
 
     &.syntax--id {
-      color: @blue;
+      color: @green;
     }
   }
 }
 
 .syntax--meta {
   &.syntax--class {
-    color: @light-orange;
+    color: @syntax-text-color;
   }
 
   &.syntax--link {
@@ -240,7 +241,7 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   }
 
   &.syntax--selector {
-    color: @purple;
+    color: @syntax-text-color;
   }
 
   &.syntax--separator {
@@ -303,10 +304,23 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
 // Theme specific rules
 
 // JS
-.syntax--js {
+.syntax--js,
+.syntax--jsx {
   .syntax--entity {
-    &.syntax--name.syntax--type {
+    &.syntax--name.syntax--type,
+    &.syntax--name.syntax--class {
       text-decoration: underline;
+    }
+    &.syntax--name {
+      font-weight: bold;
+    }
+  }
+  .syntax--unquoted {
+    color: @dirty-white;
+  }
+  .syntax--parameters {
+    .syntax--variable {
+      color: @orange;
     }
   }
   // import styles
@@ -356,11 +370,11 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   .syntax--function.syntax--any-method {
     color: @cyan;
   }
-  .syntax--constant {
-    color: @orange;
-  }
   .syntax--property-value {
     color: @syntax-text-color;
+  }
+  .syntax--constant {
+    color: @purple;
   }
 }
 
