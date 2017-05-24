@@ -176,7 +176,7 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   }
 
   &.syntax--section.syntax--embedded {
-    color: darken(@red, 10%);
+    color: @red;
   }
 
 }
@@ -307,6 +307,7 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
 .syntax--js,
 .syntax--jsx {
   .syntax--entity {
+    color: @red;
     &.syntax--name.syntax--type,
     &.syntax--name.syntax--class {
       text-decoration: underline;
@@ -375,6 +376,19 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   }
   .syntax--constant {
     color: @purple;
+  }
+}
+
+// JSDOC
+.syntax--jsdoc {
+  &.syntax--type {
+    color: @green;
+  }
+  &.syntax--name.syntax--type {
+    color: @cyan;
+  }
+  &.syntax--variable {
+    color: @orange;
   }
 }
 
