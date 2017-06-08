@@ -394,8 +394,14 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   .syntax--property-name {
     color: @cyan;
   }
-  .syntax--function.syntax--any-method {
-    color: @cyan;
+  .syntax--function {
+    &.syntax--support,
+    &.syntax--any-method {
+      color: @orange;
+      .syntax--brace {
+        color: @syntax-text-color;
+      }
+    }
   }
   .syntax--property-value {
     color: @syntax-text-color;
