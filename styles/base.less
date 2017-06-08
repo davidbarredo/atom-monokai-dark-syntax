@@ -306,6 +306,9 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
 // JS
 .syntax--js,
 .syntax--jsx {
+  .syntax--string {
+    color: @yellow;
+  }
   .syntax--entity {
     color: @red;
     &.syntax--name.syntax--type,
@@ -336,7 +339,30 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   .syntax--property {
     color: @cyan;
   }
+  .syntax--arguments,
+  .syntax--method-call {
+    .syntax--function.syntax--support {
+      color: @green;
+      font-weight: bold;
+    }
+  }
   .syntax--delimiter {
+    color: @red;
+  }
+}
+
+.syntax--jsx {
+  .syntax--json {
+    .syntax--string {
+      color: @yellow;
+    }
+  }
+  .syntax--key {
+    .syntax--unquoted {
+      color: @syntax-text-color;
+    }
+  }
+  .syntax--punctuation.syntax--separator {
     color: @red;
   }
 }
