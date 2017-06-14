@@ -375,6 +375,18 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   .syntax--entity.syntax--attribute-name{
     color: @green;
   }
+
+  .syntax--js,
+  .syntax--jsx {
+    .syntax--entity {
+      &.syntax--name.syntax--type,
+      &.syntax--name.syntax--class,
+      &.syntax--name {
+        text-decoration: none;
+        font-weight: normal;
+      }
+    }
+  }
 }
 
 // CSS
