@@ -1,7 +1,7 @@
 {
   "name": "atom-monokai-dark-syntax",
   "theme": "syntax",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Monokai based syntax theme for Atom without interference in your selected UI theme.",
   "keywords": [
     "monokai",
