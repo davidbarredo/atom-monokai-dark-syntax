@@ -373,7 +373,19 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
     text-decoration: none;
   }
   .syntax--entity.syntax--attribute-name{
+    color: orange;
+  }
+  .syntax--meta.syntax--link{
+    color: @almost-white;
+  }
+  .syntax--entity.syntax--other.syntax--attribute-name.syntax--id{
+    color: @blue;
+  }
+  .syntax--string{
     color: @green;
+    .syntax--punctuation.syntax--definition.syntax--string{
+      color: @almost-white;
+    }
   }
 
   .syntax--js,
